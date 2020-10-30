@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="todo-input" placeholder="Enter your work" data-key="123123"/>
+    <button id='add-button' onclick="newElement()">Add</button>
+    <ul id='todo-list'></ul>
+</body>
+</html>
+
+<script>
+    
+     var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("button");
+    var txt = document.createTextNode("done");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+    }
+
+
+    function newElement(){
+        var ul = document.getElementById("todo-list");
+        var li = document.createElement("li");
+        var input = document.getElementById("todo-input");
+        var input = document.getElementById("todo-input").value;
+        var value = document.createTextNode(input);
+        li.appendChild(value);
+        ul.appendChild(li);
+        
+        var span = document.createElement("button");
+        var txt = document.createTextNode("done");
+        span.className= "done";
+        span.appendChild(txt);
+        li.appendChild(span);
+            
+    }
+</script>
