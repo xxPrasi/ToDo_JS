@@ -7,7 +7,7 @@ let todo_input = document.getElementById("todo-input");
 add_button.addEventListener("click", () => {
   if (todo_input.value) {
     let todo = document.createElement("li");
-    let task = document.createElement("span");
+    let task = document.createElement("p");
     task.setAttribute("class", "task");
 
     task.addEventListener("mouseover", () => {
@@ -15,11 +15,13 @@ add_button.addEventListener("click", () => {
     });
 
     task.addEventListener("click", () => {
-      task.setAttribute("style", "text-decoration:line-through");
+      // task.setAttribute("style", "color:red");
+      // task.setAttribute("style", "text-decoration:line-through");
+      task.style.cssText = "text-decoration:line-through; color:red";
     });
 
     task.innerHTML = todo_input.value;
-    let cross = document.createElement("button");
+    let cross = document.createElement("a");
     cross.setAttribute("class", "cross");
 
     cross.innerHTML = "X";

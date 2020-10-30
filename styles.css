@@ -1,4 +1,138 @@
+
+
+
+.todo_topic{
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#todo-input{
+
+  padding: 20px;
+  margin: 40px;
+  width: 40rem;
+  font-size: 18px;
+  font-weight: 600;
+  border-color: blueviolet;
+  border-width: 3px;
+}
+
+h1{
+  text-align: center;
+}
+
+
+#add-button {
+	 display: inline-block;
+	 padding: 0.75rem 1.4rem;
+	 border-radius: 10rem;
+	 color: white;
+	 text-transform: uppercase;
+	 font-size: 1.5rem;
+	 letter-spacing: 0.15rem;
+	 transition: all 0.3s;
+	 position: relative;
+	 overflow: hidden;
+	 z-index: 1;
+}
+ #add-button:after {
+	 content: '';
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-color: grey;
+   border-radius: 10rem;
+	 z-index: -2;
+}
+ #add-button:before {
+	 content: '';
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 0%;
+	 height: 100%;
+   background-color: blueviolet;
+   opacity: 0.5;
+	 transition: all 0.3s;
+	 border-radius: 10rem;
+	 z-index: -1;
+}
+ #add-button:hover {
+	 color: #fff;
+}
+ #add-button:hover:before {
+	 width: 100%;
+}
+
+.todo-here{
+  display: flex;
+  justify-content: center;
+}
+
 .todo_div{
-  display: inline;
-  color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task{
+  font-weight: 600;
+  font-size: 28px;
+  padding: 0.1rem;
+  margin-right: 2rem;
+
+}
+
+
+
+
+
+
+.cross {
+	 display: inline-block;
+	 padding:  0.3rem 0.7rem;
+	 border-radius: 15rem;
+   color: white;
+   height: 28px;
+	 text-transform: uppercase;
+	 font-size: 1.3rem;
+	 transition: all 0.3s;
+	 position: relative;
+	 overflow: hidden;
+	 z-index: 1;
+}
+ .cross:after {
+	 content: '';
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-color: blueviolet;
+   border-radius: 10rem;
+	 z-index: -2;
+}
+ .cross:before {
+	 content: '';
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 0%;
+	 height: 100%;
+   background-color: red;
+   opacity: 0.5;
+	 transition: all 0.3s;
+	 border-radius: 10rem;
+	 z-index: -1;
+}
+ .cross:hover {
+	 color: #fff;
+}
+ .cross:hover:before {
+	 width: 100%;
 }
