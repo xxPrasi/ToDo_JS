@@ -74,6 +74,12 @@ h1{
   justify-content: center;
 }
 
+ol{
+  font-size: 28px;
+  font-weight: 600;
+  color: blueviolet;
+}
+
 .todo_div{
   display: flex;
   justify-content: space-between;
@@ -81,12 +87,18 @@ h1{
 }
 
 .task{
-  font-weight: 600;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 26px;
   padding: 0.1rem;
   margin-right: 2rem;
+  color: black;
 
 }
+
+.task:first-letter{
+  text-transform: capitalize;
+}
+
 
 
 
