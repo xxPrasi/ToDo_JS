@@ -1,14 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ToDo App</title>
+    <style>
+        .container {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+            font-family: arial;
+            margin-top: 10%;
+            background-color: hsl(187, 75%, 86%);
+            ;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+
+
+        #todo-input {
+
+            width: 560px;
+            height: 30px;
+            border-radius: 10px;
+
+        }
+
+        #add-button {
+            float: right;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: white;
+
+        }
+
+        #del-button {
+            font-size: 20px;
+            height: 25px;
+            border-radius: 10px;
+            font-size: 15px;
+            background-color: white;
+            float: right;
+        }
+
+        #todo-item {
+            font-size: 20px;
+            height: 30px;
+        }
+    </style>
+
 </head>
+
 <body>
-    <input id="todo-input" placeholder="Enter your work" data-key="123123"/>
-    <button id='add-button'>Add</button>
-    <ul id='todo-list'></ul>
+    <div class='container'>
+        <h1>ToDo List</h1>
+        <div class="input">
+            <input id="todo-input" placeholder="Enter your work" data-key="123123" />
+            <button id='add-button'>+</button>
+        </div>
+        <div class="item">
+            <ul id='todo-list'></ul>
+        </div>
+    </div>
+
+    <script>
+
+        var addBtn = document.getElementById('add-button');
+        var taskList = document.getElementById('todo-list');
+        var task_input_field = document.getElementById('todo-input');
+
+
+        // on button click does the operation of enter task, add task, strike off task, delete task
+        addBtn.addEventListener('click', () => {
+            if (task_input_field.value == '') {
+                alert('Enter task first');
+            } else {
+                var newTaskList = document.createElement('li');
+                newTaskList.setAttribute('id', 'todo-item');
+                var newDelBtn = document.createElement('button');
+                newDelBtn.setAttribute('id', 'del-button')
+                newDelBtn.innerHTML = 'X';
+                var taskValue = task_input_field.value;             // store the user input task from input_field to taskValue variable
+                newTaskList.innerHTML = taskValue;                  // returns the value to list
+                newTaskList.appendChild(newDelBtn);
+                taskList.appendChild(newTaskList);
+                // clears the input text field 
+                task_input_field.value = '';
+                // on event click strikes off text on list
+                newTaskList.addEventListener('click', () => {
+                    newTaskList.style.textDecoration = 'line-through';
+                })
+                //remove the task from the list
+                newDelBtn.addEventListener('click', () => {
+                    taskList.removeChild(newTaskList);
+                })
+            }
+        })
+
+
+    </script>
 </body>
+
 </html>
