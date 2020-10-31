@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <input id="todo-input" placeholder="Enter your work" data-key="123123"/>
-    <button id='add-button'>Add</button>
-    <ul id='todo-list'></ul>
-</body>
+<html>
+    <head>
+        <title> To Do List</title>
+        <link rel="stylesheet" type="text/css" href="..\style.css">
+    </head>
+    <body>
+        <div id="myDIV" class="header">
+            <h2>List of Task</h2>
+            <input type="text" id="myInput" placeholder="Enter your task here">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+          
+          <ul id="myUL">
+            <li>Complete Assignments</li>
+            <li class="checked">Submit Assignments</li>
+            <li>Workout</li>
+            <li>Read extra book</li>
+            <li>Do laundry</li>
+            <li>Clean study <area shape="" coords="" href="" alt=""></li>
+          </ul>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
 </html>
