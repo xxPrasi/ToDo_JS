@@ -52,6 +52,9 @@
         #todo-item {
             font-size: 20px;
             height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     </style>
 
@@ -86,15 +89,17 @@
                 var newDelBtn = document.createElement('button');
                 newDelBtn.setAttribute('id', 'del-button')
                 newDelBtn.innerHTML = 'X';
-                var taskValue = task_input_field.value;             // store the user input task from input_field to taskValue variable
-                newTaskList.innerHTML = taskValue;                  // returns the value to list
+                var taskValue = task_input_field.value;
+                var para = document.createElement("p");            // store the user input task from input_field to taskValue variable
+                para.innerHTML = taskValue;
+                newTaskList.appendChild(para);                 // returns the value to list
                 newTaskList.appendChild(newDelBtn);
                 taskList.appendChild(newTaskList);
-                // clears the input text field 
+                // clears the input text field
                 task_input_field.value = '';
                 // on event click strikes off text on list
                 newTaskList.addEventListener('click', () => {
-                    newTaskList.style.textDecoration = 'line-through';
+                    newTaskList.style.cssText="text-decoration:line-through; color:red";
                 })
                 //remove the task from the list
                 newDelBtn.addEventListener('click', () => {
