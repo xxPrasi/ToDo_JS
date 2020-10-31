@@ -10,5 +10,28 @@
     <input id="todo-input" placeholder="Enter your work" data-key="123123"/>
     <button id='add-button'>Add</button>
     <ul id='todo-list'></ul>
+
+    <script>
+        let todobutton=document.getElementById("add-button");
+        let todocontainer=document.getElementById("todo-list");
+        let todoinput=document.getElementById("todo-input");
+
+        todobutton.addEventListener("click",function(){
+            var liss=document.createElement("li")
+            var par=document.createElement("p")
+
+            par.innerText=todoinput.value;
+            liss.appendChild(par)
+            todocontainer.appendChild(liss);
+            todoinput.value="";
+            //lis.addEventListener("click",function(){
+
+            //})
+            //liss.addEventListener("click",function(){
+                //liss.removeChild(todocontainer)
+            //})
+
+        })
+    </script>
 </body>
-</html>
+</html> 
