@@ -1,0 +1,21 @@
+body{ 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 20px;  
+}
+#title {
+    font-size: 25px;
+    font-weight: bold;
+    color:indianred;
+    padding-bottom: 10px;
+}
+input{
+    font-size: 16px;
+}
+button{
+    font-size: 16px;
+}
+.add-button:hover {
+    background-color: #bbb;
+}
