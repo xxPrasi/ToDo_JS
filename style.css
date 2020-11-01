@@ -9,6 +9,8 @@ body{
     font-weight: bold;
     color:indianred;
     padding-bottom: 10px;
+    padding-top: 5px;;
+    text-align: center;
 }
 input{
     font-size: 16px;
@@ -18,4 +20,17 @@ button{
 }
 .add-button:hover {
     background-color: #bbb;
+}
+#myDiv{
+    background-color:antiquewhite;
+    height: 75px;
+    }
+#todo-input{
+    margin-left: 10px;
+}
+#add-button{
+    margin-right: 10px;
+}
+
+    
 }
